@@ -9,7 +9,7 @@ namespace KMorcinek.MathForEmilka
         {
             while (true)
             {
-                Equation equation = new AdditionGenerator().Generate();
+                Equation equation = new SubtractionGenerator().Generate();
                 Console.WriteLine();
 
                 while (true)
