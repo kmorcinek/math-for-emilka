@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading;
+using KMorcinek.MathForEmilka.Generators;
 
 namespace KMorcinek.MathForEmilka
 {
@@ -7,9 +7,11 @@ namespace KMorcinek.MathForEmilka
     {
         public void Run()
         {
+            IEquationGenerator generator = ChooseGenerator();
+
             while (true)
             {
-                Equation equation = new MultiplicationGenerator().Generate();
+                Equation equation = generator.Generate();
                 Console.WriteLine();
 
                 while (true)
@@ -27,6 +29,29 @@ namespace KMorcinek.MathForEmilka
                     {
                         Console.WriteLine("Sprobuj jeszcze raz");
                     }
+                }
+            }
+        }
+
+        IEquationGenerator ChooseGenerator()
+        {
+            Console.Write("Wybierz dzialanie (+ - *): ");
+
+            while (true)
+            {
+                string line = Console.ReadLine();
+
+                switch (line)
+                {
+                    case "+":
+                        return new AdditionGenerator();
+                    case "-":
+                        return new SubtractionGenerator();
+                    case "*":
+                        return new MultiplicationGenerator();
+                    default:
+                        Console.WriteLine("Nierozpoznany znak, wybierz jeszcze raz (+ - *):");
+                        break;
                 }
             }
         }

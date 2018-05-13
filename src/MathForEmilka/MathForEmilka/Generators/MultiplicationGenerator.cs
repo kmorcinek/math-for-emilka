@@ -1,6 +1,6 @@
-﻿namespace KMorcinek.MathForEmilka
+﻿namespace KMorcinek.MathForEmilka.Generators
 {
-    public class MultiplicationGenerator
+    public class MultiplicationGenerator : IEquationGenerator
     {
         public Equation Generate()
         {
