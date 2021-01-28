@@ -4,8 +4,8 @@
     {
         public Equation Generate()
         {
-            int first = StaticRandom.Instance.Next(6) + 2;
-            int second = StaticRandom.Instance.Next(6) + 2;
+            int first = StaticRandom.Instance.Next(7) + 2;
+            int second = StaticRandom.Instance.Next(7) + 2;
 
             return new Equation()
             {

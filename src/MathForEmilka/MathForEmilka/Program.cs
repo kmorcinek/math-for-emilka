@@ -6,7 +6,7 @@ namespace KMorcinek.MathForEmilka
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Czesc Emilka!");
+            Console.WriteLine("Czesc dziewczynki!");
 
             new Runner().Run();
 
